@@ -4,6 +4,12 @@ const helmet = require('helmet');
 const cors = require('cors');
 const xss = require('xss-clean');
 const rateLimit = require('express-rate-limit');
+const swaggerUI = require('swagger-ui-express');
+const YAML = require('yamljs');
+
+
+// configuring swagger docs
+const swaggerDocument = YAML.load('./swagger.yaml');
 
 
 const scrapRoutes = require('./routes/scrapRouter');
@@ -14,6 +20,8 @@ const app = express();
 app.use(express.json());
 
 app.use(express.static('./public'));
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.set('trust proxy', 1);
 app.use(rateLimit({

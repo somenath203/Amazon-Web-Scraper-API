@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: Amazon Web Scraping API
+  description: The work of this API is to extract various information of a particular product from amazon.
+  contact: {}
+  version: "1.0"
+servers:
+  - url: https://amazon-web-scrapper-api-11.herokuapp.com/api/v1
+    variables: {}
+paths:
+  /products/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The product ID
+    get:
+      tags:
+        - Amazon Web Scraper
+      summary: Get details of an amazon product based on its ID
+      description: The work of this route is to get full information about a particular product based on its ID from amazon.
+      operationId: GetdetailsofanamazonproductbasedonitsID
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+  /products/{id}/reviews:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The product ID
+    get:
+      tags:
+        - Amazon Web Scraper
+      summary: Get reviews of an amazon product based on its ID
+      description: The work of this route is to get full information about the reviews about a particular product based on its ID from amazon.
+      operationId: GetreviewsofanamazonproductbasedonitsID
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+  /products/{id}/offers:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The product ID
+    get:
+      tags:
+        - Amazon Web Scraper
+      summary: Get offers of an amazon product based on its ID
+      description: The work of this route is to get full information about the offers a particular product based on its ID from amazon.
+      operationId: GetoffersofanamazonproductbasedonitsID
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+  /search/{productname}:
+    parameters:
+      - in: path
+        name: productname
+        schema:
+          type: string
+        required: true
+        description: The product name
+    get:
+      tags:
+        - Amazon Web Scraper
+      summary: Search for a particular amazon product
+      description: The work of this route is to search for a particular product in amazon.
+      operationId: Searchforaparticularamazonproduct
+      parameters: []
+      responses:
+        "200":
+          description: ""
+          headers: {}
+      deprecated: false
+tags:
+  - name: Amazon Web Scraper
+    description: "This section contains all the routes related to the Amazon Web Scrapping API"
