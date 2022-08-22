@@ -10,6 +10,31 @@ html {
     font-size: 62.5%;
 }
 
+.loading_container {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.loading_container p {
+
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+
+    letter-spacing: 0.2rem;
+    font-weight: bolder;
+
+}
+
+
+
+
 .second_container {
 
     width: 100vw;
@@ -32,10 +57,11 @@ h1 {
     font-size: 2.7rem;
     letter-spacing: 0.4rem;
     font-family: 'Kanit', sans-serif;
+    text-align: center;
 }
 
 button {
-    padding: 2.5rem;
+    padding: 1.5%;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -52,4 +78,11 @@ a {
     font-size: 3rem;
     color: #fff;
     letter-spacing: 0.5rem;
+}
+
+
+.hide--div {
+
+    display: none;
+
 }
