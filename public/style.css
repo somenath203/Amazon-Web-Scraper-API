@@ -30,6 +30,8 @@ html {
     letter-spacing: 0.2rem;
     font-weight: bolder;
 
+    font-family: 'Kanit', sans-serif;
+
 }
 
 
@@ -54,10 +56,34 @@ img {
 }
 
 h1 {
-    font-size: 2.7rem;
+    font-size: 3rem;
     letter-spacing: 0.4rem;
     font-family: 'Kanit', sans-serif;
     text-align: center;
+}
+
+.info {
+    font-size: 2rem;
+    padding: 2%;
+    background: #FFF8BC;
+    border-radius: 10px;
+    letter-spacing: 0.2rem;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+}
+
+.info a {
+    text-decoration: none;
+    color: rgb(48, 105, 230);
+}
+
+i {
+    margin: 0px 5px;
+}
+
+.fa-triangle-exclamation {
+    margin-right: 8px;
+    color: #FF7F3F;
 }
 
 button {
@@ -73,7 +99,7 @@ button:hover {
     background-image: linear-gradient(to right top, #4ba452, #4daa51, #50b050, #53b54e, #57bb4c);
 }
 
-a {
+button a {
     text-decoration: none;
     font-size: 3rem;
     color: #fff;
