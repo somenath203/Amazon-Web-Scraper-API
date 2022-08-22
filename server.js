@@ -13,6 +13,8 @@ const app = express();
 
 app.use(express.json());
 
+app.use(express.static('./public'));
+
 app.set('trust proxy', 1);
 app.use(rateLimit({
     windowMs: 15 * 60 * 1000,
@@ -23,7 +25,14 @@ app.use(cors());
 app.use(xss());
 
 
-app.use('/', scrapRoutes);
+app.get('/', (req, res) => {
+
+    res.status(200).sendFile('index.html');
+
+});
+
+
+app.use('/api/v1', scrapRoutes);
 
 
 const PORT = process.env.PORT || 5000;
